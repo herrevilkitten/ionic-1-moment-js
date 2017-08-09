@@ -19,6 +19,11 @@ angular.module('starter.controllers', [])
 
 .controller('ChatDetailCtrl', function($scope, $stateParams, Chats) {
   $scope.chat = Chats.get($stateParams.chatId);
+
+  console.log(moment);
+  console.log(moment.tz);
+
+  moment.tz("2017-09-01 17:00", "America/Los_Angeles");
 })
 
 .controller('AccountCtrl', function($scope) {
